@@ -83,7 +83,8 @@ System.register(['lodash', 'app/plugins/sdk'], function (_export, _context) {
         _createClass(ImageViewerCtrl, [{
           key: 'onDataReceived',
           value: function onDataReceived(dataList) {
-            this.panel.imageURL = dataList[0].datapoints[dataList[0].datapoints.length - 1][0];
+            //this.panel.imageURL=dataList[0].datapoints[dataList[0].datapoints.length-1][0];
+            this.panel.imageURL = dataList[0].rows[0][0];
             this.render();
           }
         }, {
